@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This project is a simple Docker-like container runtime implemented in Python. It is intended **for learning purposes**, to help understand how Docker works under the hood. This application allows you to:
+This project is a simple Docker-like container runtime implemented in Python. It's intended **for learning purposes**, to help understand how Docker works under the hood. Honestly, I'm not entirely sure if this is exactly how Docker operates in the background, but my main goal was to explore how to pull and run a Docker image.
+
+This application allows you to:
 
 - **Pull Docker images** from Docker Hub.
 - **Run containers** with isolated namespaces, limited resources, and custom networking.
