@@ -1,4 +1,3 @@
-# utils.py
 
 def decode_image(image):
     # Parse image_name and tag

@@ -1,5 +1,3 @@
-# docker_pull.py
-
 import os
 import requests
 import tarfile
