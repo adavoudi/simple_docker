@@ -11,9 +11,7 @@ VETH_CONTAINER = None
 
 def set_hostname(hostname):
     libc = ctypes.CDLL(None)
-    # Convert hostname to bytes
     hostname_bytes = hostname.encode('utf-8')
-    # Call sethostname
     result = libc.sethostname(hostname_bytes, len(hostname_bytes))
     if result != 0:
         errno = ctypes.get_errno()
@@ -33,7 +31,6 @@ def grandchild_process(rootfs_path):
     pid = os.fork()
     if pid == 0:
         # Child process (the shell)
-        # Do not call os.setsid()
         os.execv("/bin/sh", ["/bin/sh"])
     else:
         # Init process
